@@ -1,0 +1,1817 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>เท็นน้อย 888</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;900&family=Sarabun:wght@400;600&display=swap">
+
+<style>
+/* ── Layout: full-screen app, dark casino floor with gold accents ── */
+:root {
+  --bg:         #0a0a0f;
+  --bg2:        #111118;
+  --bg3:        #1a1a24;
+  --card:       #16161f;
+  --border:     #2a2a3a;
+  --gold:       #d4a017;
+  --gold-light: #f5c842;
+  --gold-dim:   #8a6610;
+  --red:        #e03050;
+  --green:      #18c974;
+  --blue:       #3b82f6;
+  --purple:     #9b59f5;
+  --fg:         #f0ead8;
+  --fg2:        #a89f8a;
+  --chip-1:     #e74c3c;
+  --chip-5:     #3498db;
+  --chip-10:    #2ecc71;
+  --chip-50:    #9b59b6;
+  --chip-100:   #f39c12;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #0a0a0f; --bg2: #111118; --bg3: #1a1a24; --card: #16161f;
+    --border: #2a2a3a; --fg: #f0ead8; --fg2: #a89f8a;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; background: var(--bg); color: var(--fg); }
+body {
+  font-family: 'Sarabun', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+  padding-inline: 0;
+}
+
+/* ── HEADER ── */
+.header {
+  background: linear-gradient(135deg, #0d0d15 0%, #1a0f0f 50%, #0d0d15 100%);
+  border-bottom: 2px solid var(--gold-dim);
+  padding: 0 20px;
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 64px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background: radial-gradient(circle at 40% 35%, var(--gold-light), var(--gold), var(--gold-dim));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 0 18px rgba(212,160,23,.4);
+}
+.logo-text {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  font-size: 1.35rem;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+.logo-sub {
+  font-family: 'Kanit', sans-serif;
+  font-size: .65rem;
+  color: var(--fg2);
+  letter-spacing: .12em;
+  font-weight: 400;
+  -webkit-text-fill-color: var(--fg2);
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.credit-display {
+  background: var(--bg3);
+  border: 1px solid var(--gold-dim);
+  border-radius: 22px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Kanit', sans-serif;
+}
+.credit-label { font-size: .7rem; color: var(--fg2); }
+.credit-amount {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  font-variant-numeric: tabular-nums;
+}
+.btn-deposit {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+  color: #000;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ── NAV TABS ── */
+.nav-tabs {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 2px;
+  padding: 0 12px;
+}
+.nav-tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: var(--fg2);
+  font-family: 'Kanit', sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tab-btn.active, .tab-btn:hover {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold);
+}
+.tab-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+/* ── MAIN ── */
+.main { padding: 16px 16px 80px; }
+
+/* ── HERO BANNER ── */
+.hero {
+  background: linear-gradient(135deg, #1a0a20 0%, #0d1a2e 50%, #1a1000 100%);
+  border: 1px solid var(--gold-dim);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(212,160,23,.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(212,160,23,.15);
+  border: 1px solid var(--gold-dim);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: .7rem;
+  color: var(--gold);
+  font-family: 'Kanit', sans-serif;
+  margin-bottom: 10px;
+}
+.hero h1 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  background: linear-gradient(135deg, #fff, var(--gold-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+.hero p {
+  font-size: .85rem;
+  color: var(--fg2);
+  margin-bottom: 14px;
+}
+.hero-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+.hero-stat-val {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  font-variant-numeric: tabular-nums;
+}
+.hero-stat-lbl { font-size: .7rem; color: var(--fg2); }
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--fg);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title span { color: var(--gold); }
+
+/* ── GAME GRID ── */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.game-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+  position: relative;
+}
+.game-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-dim);
+  box-shadow: 0 8px 24px rgba(212,160,23,.15);
+}
+.game-thumb {
+  aspect-ratio: 16/10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  position: relative;
+}
+.game-thumb canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.game-tag {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-family: 'Kanit', sans-serif;
+  font-size: .6rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.tag-hot { background: var(--red); color: #fff; }
+.tag-new { background: var(--green); color: #000; }
+.tag-live { background: var(--purple); color: #fff; }
+.game-info { padding: 8px 10px; }
+.game-name {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: .82rem;
+  color: var(--fg);
+  margin-bottom: 2px;
+}
+.game-rtp {
+  font-size: .7rem;
+  color: var(--fg2);
+  display: flex;
+  justify-content: space-between;
+}
+.rtp-val { color: var(--green); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ── ACTIVE GAME ── */
+.active-game {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  display: none;
+}
+.active-game.show { display: block; }
+.game-header {
+  background: var(--bg3);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.game-title-bar {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.game-close {
+  background: rgba(255,255,255,.08);
+  border: none;
+  color: var(--fg2);
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── SLOT MACHINE ── */
+.slot-machine {
+  padding: 16px;
+}
+.slot-reels {
+  background: #0a0a10;
+  border: 2px solid var(--gold-dim);
+  border-radius: 12px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.reel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+.reel.spinning { animation: spin-blur .6s ease-out; }
+@keyframes spin-blur {
+  0%   { filter: blur(0); }
+  30%  { filter: blur(4px); transform: translateY(-4px); }
+  70%  { filter: blur(2px); transform: translateY(2px); }
+  100% { filter: blur(0); transform: translateY(0); }
+}
+.reel.win {
+  border-color: var(--gold);
+  box-shadow: 0 0 12px rgba(212,160,23,.5);
+  animation: win-flash .4s ease 3;
+}
+@keyframes win-flash {
+  0%,100%{background:var(--bg2)} 50%{background:rgba(212,160,23,.15)}
+}
+
+/* ── BET CONTROLS ── */
+.bet-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.bet-label { font-size: .8rem; color: var(--fg2); white-space: nowrap; }
+.bet-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.chip {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: .7rem;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  flex-shrink: 0;
+}
+.chip:hover { transform: scale(1.15); box-shadow: 0 4px 12px rgba(0,0,0,.4); }
+.chip.c1 { background: var(--chip-1); color: #fff; }
+.chip.c5 { background: var(--chip-5); color: #fff; }
+.chip.c10 { background: var(--chip-10); color: #000; }
+.chip.c50 { background: var(--chip-50); color: #fff; }
+.chip.c100 { background: var(--chip-100); color: #000; }
+.bet-amount {
+  margin-left: auto;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--gold-light);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  min-width: 80px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.spin-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  color: #000;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  border: none;
+  border-radius: 12px;
+  padding: 13px;
+  cursor: pointer;
+  letter-spacing: .06em;
+  transition: opacity .2s, transform .1s;
+  box-shadow: 0 4px 16px rgba(212,160,23,.35);
+}
+.spin-btn:active { transform: scale(.98); }
+.spin-btn:disabled { opacity: .5; cursor: not-allowed; }
+.win-display {
+  text-align: center;
+  padding: 8px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  min-height: 32px;
+}
+.win-big { color: var(--green); font-size: 1.4rem; animation: pop .3s ease; }
+@keyframes pop { 0%{transform:scale(.8)}60%{transform:scale(1.15)}100%{transform:scale(1)} }
+
+/* ── BACCARAT ── */
+.baccarat-table {
+  padding: 16px;
+}
+.bacc-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.bacc-box {
+  background: var(--bg3);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.bacc-box:hover { border-color: var(--gold-dim); }
+.bacc-box.selected { border-color: var(--gold); background: rgba(212,160,23,.1); }
+.bacc-name {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  margin-bottom: 4px;
+}
+.bacc-payout { font-size: .7rem; color: var(--fg2); }
+.bacc-box.player .bacc-name { color: var(--blue); }
+.bacc-box.tie .bacc-name { color: var(--green); }
+.bacc-box.banker .bacc-name { color: var(--red); }
+.bacc-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+.card-hand {
+  flex: 1;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.hand-label {
+  font-size: .7rem;
+  color: var(--fg2);
+  margin-bottom: 8px;
+  font-family: 'Kanit', sans-serif;
+}
+.hand-cards { display: flex; gap: 6px; justify-content: center; margin-bottom: 6px; }
+.card {
+  width: 32px;
+  height: 44px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0,0,0,.4);
+  color: #222;
+  flex-shrink: 0;
+}
+.card.red-suit { color: var(--red); }
+.hand-score {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+}
+.deal-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #1a3a6a, #2a5a9a);
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #3a7acc;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.deal-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── ROULETTE ── */
+.roulette-area { padding: 16px; }
+.roulette-canvas-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.roulette-canvas-wrap canvas {
+  max-width: 240px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(212,160,23,.2);
+}
+.roulette-bets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.r-bet-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 6px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--fg);
+  transition: border-color .2s, background .2s;
+}
+.r-bet-btn:hover { border-color: var(--gold-dim); }
+.r-bet-btn.selected { border-color: var(--gold); background: rgba(212,160,23,.12); }
+.r-bet-btn.red-btn { color: #ff6b6b; }
+.r-bet-btn.black-btn { color: #aaa; }
+.r-bet-btn.green-btn { color: var(--green); }
+.spin-roulette {
+  width: 100%;
+  background: linear-gradient(135deg, #3a1a5a, #6a2a9a);
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #8a3acc;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.spin-roulette:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── HI-LO ── */
+.hilo-area { padding: 16px; }
+.hilo-card-display {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.big-card {
+  width: 80px;
+  height: 110px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 900;
+  box-shadow: 0 6px 20px rgba(0,0,0,.5);
+  flex-shrink: 0;
+}
+.big-card.red { color: var(--red); }
+.big-card.black { color: #222; }
+.big-card.hidden {
+  background: linear-gradient(135deg, #1a1a30, #2a2a45);
+  color: var(--fg2);
+  font-size: 1.5rem;
+}
+.hilo-vs { font-family: 'Kanit', sans-serif; font-weight: 900; font-size: 1.1rem; color: var(--fg2); }
+.hilo-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.hilo-btn {
+  border: 2px solid var(--border);
+  background: var(--bg3);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.hilo-btn.higher { color: var(--green); }
+.hilo-btn.higher:hover { border-color: var(--green); background: rgba(24,201,116,.1); }
+.hilo-btn.lower { color: var(--red); }
+.hilo-btn.lower:hover { border-color: var(--red); background: rgba(224,48,80,.1); }
+.hilo-btn:disabled { opacity: .4; cursor: not-allowed; }
+.hilo-streak {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: .85rem;
+  color: var(--fg2);
+  margin-bottom: 10px;
+}
+.streak-val { color: var(--gold-light); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ── KENO ── */
+.keno-area { padding: 16px; }
+.keno-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.keno-num {
+  aspect-ratio: 1;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+  color: var(--fg);
+}
+.keno-num:hover { border-color: var(--gold-dim); }
+.keno-num.picked { background: rgba(212,160,23,.2); border-color: var(--gold); color: var(--gold-light); }
+.keno-num.hit { background: var(--gold); color: #000; border-color: var(--gold-light); }
+.keno-num.miss { background: rgba(224,48,80,.15); border-color: var(--red); color: var(--red); }
+.keno-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: .8rem;
+  color: var(--fg2);
+}
+.keno-info span { font-weight: 700; color: var(--gold-light); }
+.keno-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0a3a1a, #1a6a2a);
+  color: var(--green);
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.keno-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── DICE ── */
+.dice-area { padding: 16px; }
+.dice-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.die {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+  box-shadow: 4px 4px 0 rgba(0,0,0,.4);
+  flex-shrink: 0;
+  transition: transform .3s;
+}
+.die.rolling { animation: roll-dice .4s ease-in-out 3; }
+@keyframes roll-dice {
+  0%,100%{transform:rotate(0deg) scale(1)}
+  25%{transform:rotate(-15deg) scale(.9)}
+  75%{transform:rotate(15deg) scale(.9)}
+}
+.dice-pred {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.pred-btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 6px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--fg);
+  transition: border-color .2s, background .2s;
+}
+.pred-btn:hover { border-color: var(--gold-dim); }
+.pred-btn.selected { border-color: var(--gold); background: rgba(212,160,23,.12); }
+.roll-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #3a0a0a, #6a1a1a);
+  color: #ff8888;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid var(--red);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.roll-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── FOOTER BAR ── */
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  display: flex;
+  z-index: 100;
+}
+.footer-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 10px 4px;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+  font-size: .65rem;
+  color: var(--fg2);
+  transition: color .2s;
+  background: none;
+  border: none;
+}
+.footer-item.active, .footer-item:hover { color: var(--gold-light); }
+.footer-icon { font-size: 1.2rem; }
+
+/* ── PROMO / HISTORY ── */
+.promo-card {
+  background: linear-gradient(135deg, #1a0a25, #0a1a10);
+  border: 1px solid var(--purple);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.promo-icon { font-size: 2rem; flex-shrink: 0; }
+.promo-title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-size: .95rem;
+  margin-bottom: 3px;
+}
+.promo-desc { font-size: .78rem; color: var(--fg2); }
+.promo-btn {
+  margin-left: auto;
+  background: var(--purple);
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 600;
+  font-size: .75rem;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.history-table th {
+  font-family: 'Kanit', sans-serif;
+  font-size: .7rem;
+  color: var(--fg2);
+  text-align: left;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.history-table td {
+  font-size: .8rem;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+  font-variant-numeric: tabular-nums;
+}
+.win-cell { color: var(--green); font-weight: 600; }
+.lose-cell { color: var(--red); font-weight: 600; }
+
+/* ── HIDDEN PANEL ── */
+.panel { display: none; }
+.panel.show { display: block; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg3);
+  border: 1px solid var(--gold-dim);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-family: 'Kanit', sans-serif;
+  font-size: .85rem;
+  color: var(--gold-light);
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  pointer-events: none;
+  z-index: 200;
+  white-space: nowrap;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ── jackpot ticker ── */
+.jackpot-ticker {
+  background: linear-gradient(90deg, transparent, rgba(212,160,23,.08), transparent);
+  border-top: 1px solid var(--gold-dim);
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 8px 0;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.ticker-inner {
+  display: flex;
+  gap: 40px;
+  animation: ticker 18s linear infinite;
+  white-space: nowrap;
+}
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+.ticker-item {
+  font-family: 'Kanit', sans-serif;
+  font-size: .78rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.ticker-item strong { color: var(--gold-light); }
+</style>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">🎰</div>
+    <div>
+      <div class="logo-text">เท็นน้อย 888</div>
+      <div class="logo-sub">CASINO • LIVE • SLOTS</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="credit-display">
+      <span class="credit-label">เครดิต</span>
+      <span class="credit-amount" id="creditAmt">5,000</span>
+    </div>
+    <button class="btn-deposit" onclick="showToast('ติดต่อแอดมิน LINE: @tenny888')">ฝากเงิน</button>
+  </div>
+</header>
+
+<!-- NAV TABS -->
+<nav class="nav-tabs" id="navTabs">
+  <button class="tab-btn active" data-panel="home" onclick="switchTab(this,'home')">🏠 หน้าหลัก</button>
+  <button class="tab-btn" data-panel="slots" onclick="switchTab(this,'slots')">🎰 สล็อต</button>
+  <button class="tab-btn" data-panel="baccarat" onclick="switchTab(this,'baccarat')">🃏 บาคาร่า</button>
+  <button class="tab-btn" data-panel="roulette" onclick="switchTab(this,'roulette')">🎡 รูเล็ต</button>
+  <button class="tab-btn" data-panel="hilo" onclick="switchTab(this,'hilo')">🃏 ไฮโล</button>
+  <button class="tab-btn" data-panel="keno" onclick="switchTab(this,'keno')">🔢 คีโน</button>
+  <button class="tab-btn" data-panel="dice" onclick="switchTab(this,'dice')">🎲 ลูกเต๋า</button>
+  <button class="tab-btn" data-panel="promo" onclick="switchTab(this,'promo')">🎁 โปรโมชั่น <span class="tab-dot"></span></button>
+  <button class="tab-btn" data-panel="history" onclick="switchTab(this,'history')">📋 ประวัติ</button>
+</nav>
+
+<main class="main">
+
+<!-- JACKPOT TICKER -->
+<div class="jackpot-ticker">
+  <div class="ticker-inner" id="ticker"></div>
+</div>
+
+<!-- HOME PANEL -->
+<div class="panel show" id="panel-home">
+  <div class="hero">
+    <div class="hero-badge">🔥 เปิดให้บริการ 24/7</div>
+    <h1>ยินดีต้อนรับสู่<br>เท็นน้อย 888</h1>
+    <p>คาสิโนออนไลน์ครบวงจร รางวัลใหญ่รอคุณอยู่</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-val" id="onlineCount">1,247</span>
+        <span class="hero-stat-lbl">คนออนไลน์</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">฿2,450,000</span>
+        <span class="hero-stat-lbl">แจ็คพอตสะสม</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-val">6 เกม</span>
+        <span class="hero-stat-lbl">เปิดให้เล่น</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title">🎮 เกมยอดนิยม <span>เลือกเล่นได้เลย</span></div>
+  <div class="game-grid" id="gameGrid"></div>
+</div>
+
+<!-- SLOTS PANEL -->
+<div class="panel" id="panel-slots">
+  <div class="section-title">🎰 <span>สล็อตแมชชีน</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🎰 Fortune Wheel Classic</div>
+    </div>
+    <div class="slot-machine">
+      <div class="slot-reels" id="slotReels">
+        <div class="reel" id="reel0">🍒</div>
+        <div class="reel" id="reel1">🍋</div>
+        <div class="reel" id="reel2">🍊</div>
+        <div class="reel" id="reel3">⭐</div>
+        <div class="reel" id="reel4">🍒</div>
+      </div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addBet(1)">1</div>
+          <div class="chip c5" onclick="addBet(5)">5</div>
+          <div class="chip c10" onclick="addBet(10)">10</div>
+          <div class="chip c50" onclick="addBet(50)">50</div>
+          <div class="chip c100" onclick="addBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="slotBet">฿10</div>
+      </div>
+      <div class="win-display" id="slotWinMsg"></div>
+      <button class="spin-btn" id="spinBtn" onclick="spinSlot()">🎰 หมุน!</button>
+    </div>
+  </div>
+</div>
+
+<!-- BACCARAT PANEL -->
+<div class="panel" id="panel-baccarat">
+  <div class="section-title">🃏 <span>บาคาร่า</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🃏 Baccarat Live</div>
+    </div>
+    <div class="baccarat-table">
+      <div class="bacc-board">
+        <div class="bacc-box player" id="baccPlayer" onclick="selectBacc('player')">
+          <div class="bacc-name">PLAYER</div>
+          <div class="bacc-payout">จ่าย 1:1</div>
+        </div>
+        <div class="bacc-box tie" id="baccTie" onclick="selectBacc('tie')">
+          <div class="bacc-name">TIE</div>
+          <div class="bacc-payout">จ่าย 8:1</div>
+        </div>
+        <div class="bacc-box banker" id="baccBanker" onclick="selectBacc('banker')">
+          <div class="bacc-name">BANKER</div>
+          <div class="bacc-payout">จ่าย 1:1</div>
+        </div>
+      </div>
+      <div class="bacc-cards">
+        <div class="card-hand">
+          <div class="hand-label">PLAYER</div>
+          <div class="hand-cards" id="playerCards">
+            <div class="card">?</div><div class="card">?</div>
+          </div>
+          <div class="hand-score" id="playerScore">-</div>
+        </div>
+        <div class="card-hand">
+          <div class="hand-label">BANKER</div>
+          <div class="hand-cards" id="bankerCards">
+            <div class="card">?</div><div class="card">?</div>
+          </div>
+          <div class="hand-score" id="bankerScore">-</div>
+        </div>
+      </div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addBaccBet(1)">1</div>
+          <div class="chip c5" onclick="addBaccBet(5)">5</div>
+          <div class="chip c10" onclick="addBaccBet(10)">10</div>
+          <div class="chip c50" onclick="addBaccBet(50)">50</div>
+          <div class="chip c100" onclick="addBaccBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="baccBet">฿10</div>
+      </div>
+      <div class="win-display" id="baccWinMsg"></div>
+      <button class="deal-btn" id="dealBtn" onclick="dealBacc()">🃏 แจกไพ่</button>
+    </div>
+  </div>
+</div>
+
+<!-- ROULETTE PANEL -->
+<div class="panel" id="panel-roulette">
+  <div class="section-title">🎡 <span>รูเล็ต</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🎡 European Roulette</div>
+    </div>
+    <div class="roulette-area">
+      <div class="roulette-canvas-wrap">
+        <canvas id="rouletteCanvas" width="240" height="240"></canvas>
+      </div>
+      <div class="roulette-bets">
+        <div class="r-bet-btn red-btn" onclick="selectRBet(this,'red')">🔴 แดง (1:1)</div>
+        <div class="r-bet-btn black-btn" onclick="selectRBet(this,'black')">⚫ ดำ (1:1)</div>
+        <div class="r-bet-btn green-btn" onclick="selectRBet(this,'zero')">🟢 ศูนย์ (35:1)</div>
+        <div class="r-bet-btn" onclick="selectRBet(this,'odd')">คี่ (1:1)</div>
+        <div class="r-bet-btn" onclick="selectRBet(this,'even')">คู่ (1:1)</div>
+        <div class="r-bet-btn" onclick="selectRBet(this,'high')">สูง 19-36 (1:1)</div>
+      </div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addRBet(1)">1</div>
+          <div class="chip c5" onclick="addRBet(5)">5</div>
+          <div class="chip c10" onclick="addRBet(10)">10</div>
+          <div class="chip c50" onclick="addRBet(50)">50</div>
+          <div class="chip c100" onclick="addRBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="rBet">฿10</div>
+      </div>
+      <div class="win-display" id="rWinMsg"></div>
+      <button class="spin-roulette" id="spinRBtn" onclick="spinRoulette()">🎡 หมุนวงล้อ!</button>
+    </div>
+  </div>
+</div>
+
+<!-- HILO PANEL -->
+<div class="panel" id="panel-hilo">
+  <div class="section-title">🃏 <span>ไฮโล (High-Low)</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🃏 Hi-Lo Card</div>
+    </div>
+    <div class="hilo-area">
+      <div class="hilo-card-display">
+        <div class="big-card" id="hiloCurrentCard">A♠</div>
+        <div class="hilo-vs">VS</div>
+        <div class="big-card hidden" id="hiloNextCard">?</div>
+      </div>
+      <div class="hilo-streak">สตรีค: <span class="streak-val" id="hiloStreak">0</span> ครั้ง | คูณ x<span class="streak-val" id="hiloMult">1.0</span></div>
+      <div class="hilo-btns">
+        <button class="hilo-btn higher" id="hiloHighBtn" onclick="playHilo('higher')">⬆️ สูงกว่า</button>
+        <button class="hilo-btn lower" id="hiloLowBtn" onclick="playHilo('lower')">⬇️ ต่ำกว่า</button>
+      </div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addHiloBet(1)">1</div>
+          <div class="chip c5" onclick="addHiloBet(5)">5</div>
+          <div class="chip c10" onclick="addHiloBet(10)">10</div>
+          <div class="chip c50" onclick="addHiloBet(50)">50</div>
+          <div class="chip c100" onclick="addHiloBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="hiloBet">฿10</div>
+      </div>
+      <div class="win-display" id="hiloWinMsg"></div>
+      <button class="deal-btn" id="hiloDealBtn" onclick="startHilo()" style="margin-top:6px">🃏 เริ่มรอบใหม่</button>
+    </div>
+  </div>
+</div>
+
+<!-- KENO PANEL -->
+<div class="panel" id="panel-keno">
+  <div class="section-title">🔢 <span>คีโน</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🔢 Keno Classic</div>
+    </div>
+    <div class="keno-area">
+      <div class="keno-info">
+        <div>เลือก: <span id="kenoCount">0</span>/10</div>
+        <div>ถูก: <span id="kenoHits">-</span></div>
+      </div>
+      <div class="keno-grid" id="kenoGrid"></div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addKenoBet(1)">1</div>
+          <div class="chip c5" onclick="addKenoBet(5)">5</div>
+          <div class="chip c10" onclick="addKenoBet(10)">10</div>
+          <div class="chip c50" onclick="addKenoBet(50)">50</div>
+          <div class="chip c100" onclick="addKenoBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="kenoBet">฿10</div>
+      </div>
+      <div class="win-display" id="kenoWinMsg"></div>
+      <button class="keno-btn" id="kenoPlayBtn" onclick="playKeno()">🔢 ออกรางวัล!</button>
+    </div>
+  </div>
+</div>
+
+<!-- DICE PANEL -->
+<div class="panel" id="panel-dice">
+  <div class="section-title">🎲 <span>ลูกเต๋า</span></div>
+  <div class="active-game show">
+    <div class="game-header">
+      <div class="game-title-bar">🎲 Sic Bo Dice</div>
+    </div>
+    <div class="dice-area">
+      <div class="dice-row">
+        <div class="die" id="die1">⚀</div>
+        <div class="die" id="die2">⚁</div>
+        <div class="die" id="die3">⚂</div>
+      </div>
+      <div class="dice-pred">
+        <div class="pred-btn" onclick="selectPred(this,'small')">เล็ก 3-10 (1:1)</div>
+        <div class="pred-btn" onclick="selectPred(this,'big')">ใหญ่ 11-18 (1:1)</div>
+        <div class="pred-btn" onclick="selectPred(this,'triple')">ต๊อก (1:30)</div>
+      </div>
+      <div class="bet-row">
+        <span class="bet-label">เดิมพัน:</span>
+        <div class="bet-chips">
+          <div class="chip c1" onclick="addDiceBet(1)">1</div>
+          <div class="chip c5" onclick="addDiceBet(5)">5</div>
+          <div class="chip c10" onclick="addDiceBet(10)">10</div>
+          <div class="chip c50" onclick="addDiceBet(50)">50</div>
+          <div class="chip c100" onclick="addDiceBet(100)">100</div>
+        </div>
+        <div class="bet-amount" id="diceBet">฿10</div>
+      </div>
+      <div class="win-display" id="diceWinMsg"></div>
+      <button class="roll-btn" id="rollBtn" onclick="rollDice()">🎲 ทอย!</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROMO PANEL -->
+<div class="panel" id="panel-promo">
+  <div class="section-title">🎁 <span>โปรโมชั่น</span></div>
+  <div class="promo-card">
+    <div class="promo-icon">🎉</div>
+    <div>
+      <div class="promo-title">โบนัสต้อนรับ 100%</div>
+      <div class="promo-desc">ฝากครั้งแรกรับโบนัสเพิ่มอีก 100% สูงสุด ฿5,000</div>
+    </div>
+    <button class="promo-btn" onclick="showToast('รับโปรสำเร็จ! +500 เครดิต')">รับ</button>
+  </div>
+  <div class="promo-card">
+    <div class="promo-icon">🔁</div>
+    <div>
+      <div class="promo-title">แคชแบ็ค 5% ทุกวัน</div>
+      <div class="promo-desc">รับเงินคืน 5% จากยอดเล่นทุกวัน ไม่มีขั้นต่ำ</div>
+    </div>
+    <button class="promo-btn" onclick="showToast('เปิดใช้งานแคชแบ็คแล้ว!')">เปิด</button>
+  </div>
+  <div class="promo-card">
+    <div class="promo-icon">👥</div>
+    <div>
+      <div class="promo-title">แนะนำเพื่อน รับ ฿200</div>
+      <div class="promo-desc">แนะนำเพื่อนสมัคร รับโบนัส ฿200 ต่อคน ไม่จำกัด</div>
+    </div>
+    <button class="promo-btn" onclick="showToast('คัดลอกลิงก์แล้ว: tenny888.com/ref/xxx')">คัดลอก</button>
+  </div>
+  <div class="promo-card">
+    <div class="promo-icon">🎰</div>
+    <div>
+      <div class="promo-title">ฟรีสปิน 20 ครั้ง</div>
+      <div class="promo-desc">รับฟรีสปิน 20 ครั้งทุกวันศุกร์ สำหรับสมาชิก VIP</div>
+    </div>
+    <button class="promo-btn" onclick="showToast('รับฟรีสปิน 20 ครั้งแล้ว!')">รับ</button>
+  </div>
+</div>
+
+<!-- HISTORY PANEL -->
+<div class="panel" id="panel-history">
+  <div class="section-title">📋 <span>ประวัติการเล่น</span></div>
+  <div style="overflow-x:auto;border-radius:10px;border:1px solid var(--border)">
+    <table class="history-table" id="historyTable">
+      <thead>
+        <tr>
+          <th>เวลา</th>
+          <th>เกม</th>
+          <th>เดิมพัน</th>
+          <th>ผล</th>
+        </tr>
+      </thead>
+      <tbody id="historyBody">
+        <tr><td colspan="4" style="text-align:center;color:var(--fg2);padding:20px">ยังไม่มีประวัติ</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER BAR -->
+<nav class="footer-bar">
+  <button class="footer-item active" onclick="switchTab(document.querySelector('[data-panel=home]'),'home')">
+    <span class="footer-icon">🏠</span>หน้าหลัก
+  </button>
+  <button class="footer-item" onclick="switchTab(document.querySelector('[data-panel=slots]'),'slots')">
+    <span class="footer-icon">🎰</span>สล็อต
+  </button>
+  <button class="footer-item" onclick="switchTab(document.querySelector('[data-panel=baccarat]'),'baccarat')">
+    <span class="footer-icon">🃏</span>บาคาร่า
+  </button>
+  <button class="footer-item" onclick="switchTab(document.querySelector('[data-panel=promo]'),'promo')">
+    <span class="footer-icon">🎁</span>โปรโมชั่น
+  </button>
+  <button class="footer-item" onclick="switchTab(document.querySelector('[data-panel=history]'),'history')">
+    <span class="footer-icon">📋</span>ประวัติ
+  </button>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── STATE ──
+let credit = 5000;
+let slotBet = 10, baccBet = 10, rBet = 10, hiloBet = 10, kenoBet = 10, diceBet = 10;
+let baccSelection = null, rSelection = null, predSelection = null;
+let hiloCurrentVal = 0, hiloStreak = 0;
+let kenoSelected = new Set();
+let history = [];
+
+// ── UTILS ──
+function fmt(n) { return n.toLocaleString('th-TH'); }
+function updateCredit(delta) {
+  credit += delta;
+  document.getElementById('creditAmt').textContent = fmt(credit);
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+function addHistory(game, bet, result) {
+  const now = new Date();
+  const ts = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
+  history.unshift({ ts, game, bet, result });
+  renderHistory();
+}
+function renderHistory() {
+  const tbody = document.getElementById('historyBody');
+  if (!history.length) return;
+  tbody.innerHTML = history.slice(0, 30).map(h => `
+    <tr>
+      <td>${h.ts}</td>
+      <td>${h.game}</td>
+      <td>฿${fmt(h.bet)}</td>
+      <td class="${h.result > 0 ? 'win-cell' : 'lose-cell'}">${h.result > 0 ? '+' : ''}฿${fmt(h.result)}</td>
+    </tr>
+  `).join('');
+}
+
+// ── TABS ──
+function switchTab(btn, panel) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('show'));
+  const p = document.getElementById('panel-' + panel);
+  if (p) p.classList.add('show');
+  document.querySelectorAll('.footer-item').forEach(f => f.classList.remove('active'));
+}
+
+// ── GAME GRID ──
+const games = [
+  { name: 'Fortune Wheel', emoji: '🎰', tag: 'hot', rtp: '96.5%', panel: 'slots' },
+  { name: 'Baccarat Live', emoji: '🃏', tag: 'live', rtp: '98.9%', panel: 'baccarat' },
+  { name: 'Roulette', emoji: '🎡', tag: 'hot', rtp: '97.3%', panel: 'roulette' },
+  { name: 'Hi-Lo Card', emoji: '🃏', tag: 'new', rtp: '95.0%', panel: 'hilo' },
+  { name: 'Keno Classic', emoji: '🔢', tag: 'new', rtp: '92.0%', panel: 'keno' },
+  { name: 'Sic Bo Dice', emoji: '🎲', tag: 'hot', rtp: '97.2%', panel: 'dice' },
+];
+function buildGameGrid() {
+  const grid = document.getElementById('gameGrid');
+  const tagClass = { hot: 'tag-hot', new: 'tag-new', live: 'tag-live' };
+  const tagLabel = { hot: '🔥 ยอดนิยม', new: '✨ ใหม่', live: '🔴 ไลฟ์' };
+  grid.innerHTML = games.map((g, i) => `
+    <div class="game-card" onclick="openGame('${g.panel}')">
+      <div class="game-thumb" style="background:${thumbGrad(i)}">
+        <span style="font-size:2.4rem;z-index:1">${g.emoji}</span>
+        <span class="game-tag ${tagClass[g.tag]}">${tagLabel[g.tag]}</span>
+      </div>
+      <div class="game-info">
+        <div class="game-name">${g.name}</div>
+        <div class="game-rtp"><span>RTP</span><span class="rtp-val">${g.rtp}</span></div>
+      </div>
+    </div>
+  `).join('');
+}
+function thumbGrad(i) {
+  const gs = [
+    'linear-gradient(135deg,#1a0a2a,#2a1040)',
+    'linear-gradient(135deg,#0a1a2a,#102040)',
+    'linear-gradient(135deg,#1a1a0a,#302a10)',
+    'linear-gradient(135deg,#0a1a10,#102a18)',
+    'linear-gradient(135deg,#1a0a10,#2a1020)',
+    'linear-gradient(135deg,#0a0a1a,#10102a)',
+  ];
+  return gs[i % gs.length];
+}
+function openGame(panel) {
+  const btn = document.querySelector(`[data-panel="${panel}"]`);
+  switchTab(btn, panel);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+buildGameGrid();
+
+// ── JACKPOT TICKER ──
+const tickerMsgs = [
+  '<strong>สมาชิก ***89</strong> ชนะ ฿12,500 จากสล็อต!',
+  '<strong>สมาชิก ***21</strong> ชนะ ฿8,000 จากบาคาร่า!',
+  '<strong>สมาชิก ***55</strong> ชนะ ฿45,000 แจ็คพอต!',
+  '<strong>สมาชิก ***77</strong> ชนะ ฿3,200 จากรูเล็ต!',
+  '<strong>สมาชิก ***04</strong> ชนะ ฿6,000 จากไฮโล!',
+];
+function buildTicker() {
+  const t = document.getElementById('ticker');
+  const all = [...tickerMsgs, ...tickerMsgs].map(m =>
+    `<span class="ticker-item">🏆 ${m}</span>`).join('');
+  t.innerHTML = all;
+}
+buildTicker();
+
+// ── ONLINE COUNT FLICKER ──
+setInterval(() => {
+  const el = document.getElementById('onlineCount');
+  const base = 1247, variance = Math.floor(Math.random() * 40) - 20;
+  el.textContent = fmt(base + variance);
+}, 4000);
+
+// ── SLOT ──
+const slotSymbols = ['🍒','🍋','🍊','🍇','⭐','🔔','💎','7️⃣','🍀','👑'];
+const slotWeights = [20,18,16,14,10,8,6,4,2,1];
+function weightedPick() {
+  const total = slotWeights.reduce((a, b) => a + b, 0);
+  let r = Math.random() * total;
+  for (let i = 0; i < slotSymbols.length; i++) {
+    r -= slotWeights[i];
+    if (r <= 0) return slotSymbols[i];
+  }
+  return slotSymbols[0];
+}
+function addBet(n) {
+  slotBet = Math.min(slotBet + n, Math.min(credit, 1000));
+  document.getElementById('slotBet').textContent = '฿' + fmt(slotBet);
+}
+function spinSlot() {
+  if (credit < slotBet || slotBet <= 0) { showToast('เครดิตไม่พอ!'); return; }
+  const btn = document.getElementById('spinBtn');
+  btn.disabled = true;
+  document.getElementById('slotWinMsg').textContent = '';
+  updateCredit(-slotBet);
+  const reels = [0,1,2,3,4].map(i => document.getElementById('reel'+i));
+  reels.forEach(r => { r.classList.remove('win'); r.classList.add('spinning'); });
+
+  const results = [];
+  let delay = 0;
+  reels.forEach((reel, i) => {
+    delay += 180;
+    setTimeout(() => {
+      const sym = weightedPick();
+      results.push(sym);
+      reel.textContent = sym;
+      reel.classList.remove('spinning');
+      if (i === 4) {
+        setTimeout(() => {
+          const win = calcSlotWin(results, slotBet);
+          if (win > 0) {
+            results.forEach((s, j) => {
+              if (results.filter(x => x === s).length >= 3) {
+                reels[j].classList.add('win');
+              }
+            });
+            document.getElementById('slotWinMsg').innerHTML = `<span class="win-big">🎉 ชนะ ฿${fmt(win)}!</span>`;
+            updateCredit(win);
+            addHistory('สล็อต', slotBet, win);
+          } else {
+            document.getElementById('slotWinMsg').textContent = 'ไม่ถูกรางวัล ลองใหม่นะ';
+            addHistory('สล็อต', slotBet, -slotBet);
+          }
+          btn.disabled = false;
+        }, 200);
+      }
+    }, delay + i * 80);
+  });
+}
+function calcSlotWin(syms, bet) {
+  const counts = {};
+  syms.forEach(s => counts[s] = (counts[s] || 0) + 1);
+  const max = Math.max(...Object.values(counts));
+  const sym = Object.keys(counts).find(k => counts[k] === max);
+  const idx = slotSymbols.indexOf(sym);
+  if (max === 5) return bet * [3, 4, 5, 6, 8, 12, 20, 50, 100, 200][idx];
+  if (max === 4) return bet * [1.5, 2, 2, 2.5, 3, 4, 6, 10, 25, 50][idx];
+  if (max === 3) return bet * [0.5, 0.5, 0.5, 0.8, 1, 1.5, 2, 3, 8, 15][idx];
+  return 0;
+}
+
+// ── BACCARAT ──
+const suits = ['♠','♥','♦','♣'];
+const ranks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+function randCard() {
+  return { rank: ranks[Math.floor(Math.random()*13)], suit: suits[Math.floor(Math.random()*4)] };
+}
+function cardVal(c) {
+  if (['10','J','Q','K'].includes(c.rank)) return 0;
+  if (c.rank === 'A') return 1;
+  return parseInt(c.rank);
+}
+function handScore(cards) {
+  return cards.reduce((s,c) => (s + cardVal(c)) % 10, 0);
+}
+function cardHTML(c) {
+  const isRed = c.suit === '♥' || c.suit === '♦';
+  return `<div class="card${isRed ? ' red-suit' : ''}">${c.rank}${c.suit}</div>`;
+}
+function selectBacc(side) {
+  baccSelection = side;
+  document.querySelectorAll('.bacc-box').forEach(b => b.classList.remove('selected'));
+  document.getElementById('bacc' + side.charAt(0).toUpperCase() + side.slice(1)).classList.add('selected');
+}
+function addBaccBet(n) {
+  baccBet = Math.min(baccBet + n, Math.min(credit, 2000));
+  document.getElementById('baccBet').textContent = '฿' + fmt(baccBet);
+}
+function dealBacc() {
+  if (!baccSelection) { showToast('เลือก Player / Tie / Banker ก่อน!'); return; }
+  if (credit < baccBet) { showToast('เครดิตไม่พอ!'); return; }
+  document.getElementById('dealBtn').disabled = true;
+  updateCredit(-baccBet);
+  document.getElementById('baccWinMsg').textContent = '';
+
+  const pc = [randCard(), randCard()];
+  const bc = [randCard(), randCard()];
+  const ps = handScore(pc), bs = handScore(bc);
+
+  document.getElementById('playerCards').innerHTML = pc.map(cardHTML).join('');
+  document.getElementById('bankerCards').innerHTML = bc.map(cardHTML).join('');
+  document.getElementById('playerScore').textContent = ps;
+  document.getElementById('bankerScore').textContent = bs;
+
+  let outcome = ps > bs ? 'player' : bs > ps ? 'banker' : 'tie';
+  let win = 0;
+  if (baccSelection === outcome) {
+    win = baccSelection === 'tie' ? baccBet * 8 : baccBet * 2;
+    document.getElementById('baccWinMsg').innerHTML = `<span class="win-big">🎉 ชนะ ฿${fmt(win)}!</span>`;
+    updateCredit(win);
+    addHistory('บาคาร่า', baccBet, win - baccBet);
+  } else {
+    document.getElementById('baccWinMsg').textContent = `แพ้ — ผลคือ ${outcome.toUpperCase()}`;
+    addHistory('บาคาร่า', baccBet, -baccBet);
+  }
+  setTimeout(() => { document.getElementById('dealBtn').disabled = false; }, 1000);
+}
+
+// ── ROULETTE ──
+function selectRBet(btn, type) {
+  rSelection = type;
+  document.querySelectorAll('.r-bet-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+function addRBet(n) {
+  rBet = Math.min(rBet + n, Math.min(credit, 2000));
+  document.getElementById('rBet').textContent = '฿' + fmt(rBet);
+}
+const rouletteRed = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
+function drawRoulette(angle) {
+  const c = document.getElementById('rouletteCanvas');
+  const ctx = c.getContext('2d');
+  const cx = 120, cy = 120, r = 115, inner = 70;
+  const nums = [0,32,15,19,4,21,2,25,17,34,6,27,13,36,11,30,8,23,10,5,24,16,33,1,20,14,31,9,22,18,29,7,28,12,35,3,26];
+  ctx.clearRect(0,0,240,240);
+  nums.forEach((n, i) => {
+    const a = (angle + (i / nums.length) * Math.PI * 2);
+    const a2 = a + (1 / nums.length) * Math.PI * 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, a, a2);
+    ctx.closePath();
+    ctx.fillStyle = n === 0 ? '#18a952' : rouletteRed.includes(n) ? '#c0392b' : '#1a1a1a';
+    ctx.fill();
+    ctx.strokeStyle = '#333';
+    ctx.lineWidth = .5;
+    ctx.stroke();
+    const mid = a + (0.5 / nums.length) * Math.PI * 2;
+    ctx.save();
+    ctx.translate(cx + Math.cos(mid) * (r * .78), cy + Math.sin(mid) * (r * .78));
+    ctx.rotate(mid + Math.PI / 2);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 7px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(n, 0, 0);
+    ctx.restore();
+  });
+  ctx.beginPath();
+  ctx.arc(cx, cy, inner, 0, Math.PI*2);
+  ctx.fillStyle = '#0d0d14';
+  ctx.fill();
+  ctx.strokeStyle = '#555';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(cx, cy, 12, 0, Math.PI*2);
+  ctx.fillStyle = '#d4a017';
+  ctx.fill();
+  // ball indicator
+  ctx.beginPath();
+  ctx.moveTo(cx, 6);
+  ctx.lineTo(cx - 5, 18);
+  ctx.lineTo(cx + 5, 18);
+  ctx.closePath();
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+}
+let rAngle = 0;
+drawRoulette(rAngle);
+
+function spinRoulette() {
+  if (!rSelection) { showToast('เลือกประเภทเดิมพันก่อน!'); return; }
+  if (credit < rBet) { showToast('เครดิตไม่พอ!'); return; }
+  document.getElementById('spinRBtn').disabled = true;
+  document.getElementById('rWinMsg').textContent = '';
+  updateCredit(-rBet);
+
+  const result = Math.floor(Math.random() * 37);
+  const spins = Math.PI * 2 * (8 + Math.random() * 4);
+  const duration = 3000;
+  const startAngle = rAngle;
+  const startTime = performance.now();
+
+  function animate(t) {
+    const elapsed = t - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    rAngle = startAngle + spins * ease;
+    drawRoulette(rAngle);
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    } else {
+      const isRed = rouletteRed.includes(result);
+      const isBlack = result !== 0 && !isRed;
+      let won = false;
+      if (rSelection === 'red' && isRed) won = true;
+      if (rSelection === 'black' && isBlack) won = true;
+      if (rSelection === 'zero' && result === 0) won = true;
+      if (rSelection === 'odd' && result !== 0 && result % 2 !== 0) won = true;
+      if (rSelection === 'even' && result !== 0 && result % 2 === 0) won = true;
+      if (rSelection === 'high' && result >= 19) won = true;
+      const multiplier = rSelection === 'zero' ? 35 : 1;
+      const winAmt = won ? rBet * (multiplier + 1) : 0;
+      if (won) {
+        document.getElementById('rWinMsg').innerHTML = `<span class="win-big">🎉 ผล ${result} — ชนะ ฿${fmt(winAmt)}!</span>`;
+        updateCredit(winAmt);
+        addHistory('รูเล็ต', rBet, winAmt - rBet);
+      } else {
+        document.getElementById('rWinMsg').textContent = `ผล ${result} — แพ้`;
+        addHistory('รูเล็ต', rBet, -rBet);
+      }
+      document.getElementById('spinRBtn').disabled = false;
+    }
+  }
+  requestAnimationFrame(animate);
+}
+
+// ── HI-LO ──
+const hiloRanks = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+const hiloVals  = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+function hiloCard(val) {
+  const rank = hiloRanks[val - 1];
+  const suit = suits[Math.floor(Math.random() * 4)];
+  const isRed = suit === '♥' || suit === '♦';
+  return { rank, suit, val, isRed };
+}
+function addHiloBet(n) {
+  hiloBet = Math.min(hiloBet + n, Math.min(credit, 1000));
+  document.getElementById('hiloBet').textContent = '฿' + fmt(hiloBet);
+}
+function startHilo() {
+  hiloStreak = 0;
+  document.getElementById('hiloStreak').textContent = 0;
+  document.getElementById('hiloMult').textContent = '1.0';
+  hiloCurrentVal = Math.ceil(Math.random() * 13);
+  const c = hiloCard(hiloCurrentVal);
+  const el = document.getElementById('hiloCurrentCard');
+  el.textContent = c.rank + c.suit;
+  el.className = 'big-card ' + (c.isRed ? 'red' : 'black');
+  document.getElementById('hiloNextCard').textContent = '?';
+  document.getElementById('hiloNextCard').className = 'big-card hidden';
+  document.getElementById('hiloWinMsg').textContent = '';
+  document.getElementById('hiloHighBtn').disabled = false;
+  document.getElementById('hiloLowBtn').disabled = false;
+}
+function playHilo(dir) {
+  if (credit < hiloBet) { showToast('เครดิตไม่พอ!'); return; }
+  updateCredit(-hiloBet);
+  document.getElementById('hiloHighBtn').disabled = true;
+  document.getElementById('hiloLowBtn').disabled = true;
+
+  let nextVal;
+  do { nextVal = Math.ceil(Math.random() * 13); } while (nextVal === hiloCurrentVal);
+  const nc = hiloCard(nextVal);
+  const el = document.getElementById('hiloNextCard');
+  el.textContent = nc.rank + nc.suit;
+  el.className = 'big-card ' + (nc.isRed ? 'red' : 'black');
+
+  const won = (dir === 'higher' && nextVal > hiloCurrentVal) || (dir === 'lower' && nextVal < hiloCurrentVal);
+  if (won) {
+    hiloStreak++;
+    const mult = 1 + hiloStreak * 0.5;
+    document.getElementById('hiloStreak').textContent = hiloStreak;
+    document.getElementById('hiloMult').textContent = mult.toFixed(1);
+    const winAmt = Math.round(hiloBet * mult);
+    updateCredit(winAmt);
+    document.getElementById('hiloWinMsg').innerHTML = `<span class="win-big">🎉 ชนะ ฿${fmt(winAmt)}!</span>`;
+    addHistory('ไฮโล', hiloBet, winAmt - hiloBet);
+    hiloCurrentVal = nextVal;
+    document.getElementById('hiloCurrentCard').textContent = nc.rank + nc.suit;
+    document.getElementById('hiloCurrentCard').className = 'big-card ' + (nc.isRed ? 'red' : 'black');
+    document.getElementById('hiloNextCard').textContent = '?';
+    document.getElementById('hiloNextCard').className = 'big-card hidden';
+    setTimeout(() => {
+      document.getElementById('hiloHighBtn').disabled = false;
+      document.getElementById('hiloLowBtn').disabled = false;
+    }, 600);
+  } else {
+    document.getElementById('hiloWinMsg').textContent = `แพ้ — ไพ่คือ ${nc.rank}${nc.suit}`;
+    addHistory('ไฮโล', hiloBet, -hiloBet);
+    hiloStreak = 0;
+    setTimeout(startHilo, 1500);
+  }
+}
+startHilo();
+
+// ── KENO ──
+function buildKeno() {
+  const g = document.getElementById('kenoGrid');
+  g.innerHTML = Array.from({length:80},(_,i) => `
+    <div class="keno-num" id="kn${i+1}" onclick="toggleKeno(${i+1})">${i+1}</div>
+  `).join('');
+}
+function addKenoBet(n) {
+  kenoBet = Math.min(kenoBet + n, Math.min(credit, 500));
+  document.getElementById('kenoBet').textContent = '฿' + fmt(kenoBet);
+}
+function toggleKeno(n) {
+  if (kenoSelected.has(n)) {
+    kenoSelected.delete(n);
+    document.getElementById('kn'+n).classList.remove('picked');
+  } else if (kenoSelected.size < 10) {
+    kenoSelected.add(n);
+    document.getElementById('kn'+n).classList.add('picked');
+  } else {
+    showToast('เลือกได้สูงสุด 10 เลข');
+    return;
+  }
+  document.getElementById('kenoCount').textContent = kenoSelected.size;
+}
+function playKeno() {
+  if (kenoSelected.size === 0) { showToast('เลือกเลขก่อน!'); return; }
+  if (credit < kenoBet) { showToast('เครดิตไม่พอ!'); return; }
+  document.getElementById('kenoPlayBtn').disabled = true;
+  updateCredit(-kenoBet);
+  document.querySelectorAll('.keno-num').forEach(el => el.classList.remove('hit','miss'));
+
+  const drawn = new Set();
+  while (drawn.size < 20) drawn.add(Math.floor(Math.random() * 80) + 1);
+  let hits = 0;
+  drawn.forEach(n => {
+    const el = document.getElementById('kn'+n);
+    if (kenoSelected.has(n)) { el.classList.add('hit'); hits++; }
+    else el.classList.add('miss');
+  });
+  document.getElementById('kenoHits').textContent = hits;
+
+  const payTable = [0,0,1,2,5,15,50,200,1000,5000,25000];
+  const selected = kenoSelected.size;
+  const matchIdx = Math.min(hits, selected, payTable.length - 1);
+  const mult = payTable[Math.min(hits, 10)];
+  const win = kenoBet * mult;
+  if (win > 0) {
+    document.getElementById('kenoWinMsg').innerHTML = `<span class="win-big">🎉 ถูก ${hits} เลข — ชนะ ฿${fmt(win)}!</span>`;
+    updateCredit(win);
+    addHistory('คีโน', kenoBet, win - kenoBet);
+  } else {
+    document.getElementById('kenoWinMsg').textContent = `ถูก ${hits} เลข — ไม่ถูกรางวัล`;
+    addHistory('คีโน', kenoBet, -kenoBet);
+  }
+  setTimeout(() => {
+    document.getElementById('kenoPlayBtn').disabled = false;
+    kenoSelected.clear();
+    document.getElementById('kenoCount').textContent = 0;
+    document.querySelectorAll('.keno-num').forEach(el => {
+      el.classList.remove('picked','hit','miss');
+    });
+  }, 2000);
+}
+buildKeno();
+
+// ── DICE ──
+const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+function addDiceBet(n) {
+  diceBet = Math.min(diceBet + n, Math.min(credit, 2000));
+  document.getElementById('diceBet').textContent = '฿' + fmt(diceBet);
+}
+function selectPred(btn, p) {
+  predSelection = p;
+  document.querySelectorAll('.pred-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+function rollDice() {
+  if (!predSelection) { showToast('เลือกประเภทเดิมพันก่อน!'); return; }
+  if (credit < diceBet) { showToast('เครดิตไม่พอ!'); return; }
+  document.getElementById('rollBtn').disabled = true;
+  document.getElementById('diceWinMsg').textContent = '';
+  updateCredit(-diceBet);
+
+  const dice = [1,2,3].map(() => Math.ceil(Math.random() * 6));
+  [1,2,3].forEach((_, i) => document.getElementById('die'+(i+1)).classList.add('rolling'));
+  setTimeout(() => {
+    [1,2,3].forEach((_, i) => {
+      document.getElementById('die'+(i+1)).textContent = diceFaces[dice[i]-1];
+      document.getElementById('die'+(i+1)).classList.remove('rolling');
+    });
+    const total = dice.reduce((a,b)=>a+b,0);
+    const isTriple = dice[0]===dice[1] && dice[1]===dice[2];
+    let won = false, mult = 1;
+    if (predSelection === 'small' && total <= 10 && !isTriple) won = true;
+    if (predSelection === 'big' && total >= 11 && !isTriple) won = true;
+    if (predSelection === 'triple' && isTriple) { won = true; mult = 30; }
+    if (won) {
+      const winAmt = diceBet * (mult + 1);
+      document.getElementById('diceWinMsg').innerHTML = `<span class="win-big">🎉 รวม ${total} — ชนะ ฿${fmt(winAmt)}!</span>`;
+      updateCredit(winAmt);
+      addHistory('ลูกเต๋า', diceBet, winAmt - diceBet);
+    } else {
+      document.getElementById('diceWinMsg').textContent = `รวม ${total} — แพ้`;
+      addHistory('ลูกเต๋า', diceBet, -diceBet);
+    }
+    document.getElementById('rollBtn').disabled = false;
+  }, 1200);
+}
+</script>
+
+</body></html>
